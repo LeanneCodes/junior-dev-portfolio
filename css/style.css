@@ -1,5 +1,14 @@
-/* Colour scheme */
+/* Font & colour scheme */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap');
 
+:root {
+    --white: #fff;
+    --aubergine: #1f1d36;
+    --purple: #3f3351;
+    --magenta: #864879;
+    --peach: #e9a6a6;
+    --header-color: hsl(0, 1%, 71%);
+}
 
 /* All elements */
 * {
@@ -8,12 +17,22 @@
     margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+    color: var(--header-color);
+    letter-spacing: 0.5px;
+}
+
+p, li, a {
+    font-family: 'Montserrat', sans-serif;
+}
+
 /* Navbar */
 header {
     display: flex;
     justify-content: space-between;
     padding: 40px 60px;
-    background-color: skyblue;
+    background-color: var(--white);
 }
 
 nav {
@@ -38,12 +57,17 @@ ul li {
 
 a {
     text-decoration: none;
-    color: darkgreen;
+    color: var(--magenta);
+    font-weight: 500;
+}
+
+a:hover {
+    font-weight: 700;
 }
 
 /* Introduction */
 #heroSection {
-    background-color: lightsalmon;
+    background-color: var(--aubergine);
 }
 
 #heroInfo {
@@ -51,7 +75,7 @@ a {
     flex-direction: row;
     justify-content: space-around;
     text-align: center;
-    padding: 50px 100px;
+    padding: 50px 300px;
 }
 
 #heroInfo img {
@@ -62,11 +86,18 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    padding: 50px 0;
+    justify-content: space-around;
+    color: var(--white);
 }
 
 h2 {
     font-size: 50px;
+    color: var(--white);
+}
+
+#resume i {
+    font-size: 16px;
 }
 
 /* Main sections */
@@ -98,7 +129,7 @@ h3 {
 }
 
 .title {
-    border-right: 3px solid lightseagreen;
+    border-right: 3px solid var(--magenta);
     padding: 60px;
     width: 20vw;
     text-align: center;
@@ -128,6 +159,8 @@ i {
     padding-bottom: 10px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    color: var(--magenta);
 }
 
 /* Main My Work */
@@ -145,42 +178,31 @@ i {
 
 #proj1 {
     grid-area: proj1;
-    background-image: url('../assets/couch.jpg');
+    background-image: url('../assets/blog.png');
 }
 
 #proj2 {
     grid-area: proj2;
-    background-image: url('../assets/chair.jpg');
+    background-image: url('../assets/budget.png');
 }
 
 #proj3 {
     grid-area: proj3;
-    background-image: url('../assets/chair.jpg');
+    background-image: url('../assets/horiseon.png');
 }
 
 #proj4 {
     grid-area: proj4;
-    background-image: url('../assets/chair.jpg');
+    background-image: url('../assets/prework.png');
 }
 
 .project {
-    background-color: pink;
+    background-color: var(--purple);
     justify-content: space-around;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.project-card-title-main {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 16%;
-    width: 97%;
-    top: 402px;
-    left: 19px;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 10px 15px;
+    border: 5px solid var(--aubergine);
 }
 
 .project-card-title {
@@ -188,13 +210,25 @@ i {
     flex-direction: column;
     position: relative;
     height: 25%;
-    width: 92%;
-    top: 210px;
-    left: 17px;
-    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    top: 218px;
+    background-color: var(--aubergine);
     padding: 10px 15px;
 }
 
+.project-card-title h4, .project-card-title p {
+    color: var(--white);
+}
+
+.project-card-title a, #resume {
+    color: var(--peach);
+}
+
+.main {
+    height: 16%;
+    width: 100%;
+    top: 411.4px;
+}
 
 /* Main Contact */
 #contact-container {
@@ -222,12 +256,13 @@ i {
 
 /* Footer */
 footer div {
-    background-color: plum;
-    height: 250px;
+    background-color: var(--purple);
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--white);
 }
 
 h5 {
