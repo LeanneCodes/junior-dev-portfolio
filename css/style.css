@@ -310,6 +310,7 @@ footer div p {
 
     #work-grid {
         grid-template-columns: repeat(3, 300px);
+        margin-right: -30px;
     }
 
     .project-card-title {
